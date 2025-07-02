@@ -1,6 +1,6 @@
 package viewpackage;
 
-import javax.swing.JFrame;
+//import javax.swing.JFrame; 
 
 /**
  *
@@ -15,7 +15,7 @@ public class mainFrame extends javax.swing.JFrame {
      */
     public mainFrame() {
         initComponents();
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH); // code making the frame full screen
+//        this.setExtendedState(JFrame.MAXIMIZED_BOTH); // code making the frame full screen
     }
 
     /**
@@ -27,17 +27,103 @@ public class mainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        firstLayer = new javax.swing.JPanel();
+        navigationpanel = new javax.swing.JPanel();
+        logoLabel = new javax.swing.JLabel();
+        motherTab = new javax.swing.JTabbedPane();
+        dashboardTab = new javax.swing.JPanel();
+        dashboardLabel = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1570, 900));
+
+        firstLayer.setBackground(new java.awt.Color(102, 102, 0));
+        firstLayer.setDoubleBuffered(false);
+        firstLayer.setPreferredSize(new java.awt.Dimension(1800, 990));
+        firstLayer.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        navigationpanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        logoLabel.setFont(new java.awt.Font("Liberation Sans", 1, 98)); // NOI18N
+        logoLabel.setForeground(new java.awt.Color(44, 62, 80));
+        logoLabel.setText("RSM");
+        logoLabel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(44, 62, 80), 4, true));
+
+        javax.swing.GroupLayout navigationpanelLayout = new javax.swing.GroupLayout(navigationpanel);
+        navigationpanel.setLayout(navigationpanelLayout);
+        navigationpanelLayout.setHorizontalGroup(
+            navigationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navigationpanelLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(logoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(26, Short.MAX_VALUE))
+        );
+        navigationpanelLayout.setVerticalGroup(
+            navigationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navigationpanelLayout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addComponent(logoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(735, Short.MAX_VALUE))
+        );
+
+        firstLayer.add(navigationpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 900));
+
+        motherTab.setBackground(new java.awt.Color(51, 0, 204));
+
+        dashboardTab.setBackground(new java.awt.Color(52, 73, 94));
+
+        dashboardLabel.setFont(new java.awt.Font("URW Bookman", 1, 45)); // NOI18N
+        dashboardLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dashboardLabel.setText("Dashboard");
+
+        javax.swing.GroupLayout dashboardTabLayout = new javax.swing.GroupLayout(dashboardTab);
+        dashboardTab.setLayout(dashboardTabLayout);
+        dashboardTabLayout.setHorizontalGroup(
+            dashboardTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dashboardTabLayout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(dashboardLabel)
+                .addContainerGap(1023, Short.MAX_VALUE))
+        );
+        dashboardTabLayout.setVerticalGroup(
+            dashboardTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dashboardTabLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(dashboardLabel)
+                .addContainerGap(793, Short.MAX_VALUE))
+        );
+
+        motherTab.addTab("dashboard", dashboardTab);
+
+        jPanel4.setBackground(new java.awt.Color(52, 73, 94));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1320, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 865, Short.MAX_VALUE)
+        );
+
+        motherTab.addTab("tab2", jPanel4);
+
+        firstLayer.add(motherTab, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 1320, 900));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1593, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(firstLayer, javax.swing.GroupLayout.PREFERRED_SIZE, 1599, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 829, Short.MAX_VALUE)
+            .addComponent(firstLayer, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
         );
 
         pack();
@@ -70,5 +156,12 @@ public class mainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel dashboardLabel;
+    private javax.swing.JPanel dashboardTab;
+    private javax.swing.JPanel firstLayer;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel logoLabel;
+    private javax.swing.JTabbedPane motherTab;
+    private javax.swing.JPanel navigationpanel;
     // End of variables declaration//GEN-END:variables
 }
