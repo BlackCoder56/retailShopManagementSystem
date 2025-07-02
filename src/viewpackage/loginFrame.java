@@ -43,7 +43,7 @@ public class loginFrame extends javax.swing.JFrame {
         setName("Login Jframe form"); // NOI18N
         setResizable(false);
 
-        backgroundJPanel.setBackground(new java.awt.Color(52, 73, 94));
+        backgroundJPanel.setBackground(new java.awt.Color(44, 62, 80));
 
         sideBarJPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -60,7 +60,7 @@ public class loginFrame extends javax.swing.JFrame {
         jLabel3.setText("S");
 
         jLabel7.setFont(new java.awt.Font("Noto Sans Display", 0, 15)); // NOI18N
-        jLabel7.setText("Version 0.1");
+        jLabel7.setText("Version 0.2");
 
         javax.swing.GroupLayout sideBarJPanelLayout = new javax.swing.GroupLayout(sideBarJPanel);
         sideBarJPanel.setLayout(sideBarJPanelLayout);

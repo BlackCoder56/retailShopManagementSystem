@@ -30,6 +30,15 @@ public class mainFrame extends javax.swing.JFrame {
         firstLayer = new javax.swing.JPanel();
         navigationpanel = new javax.swing.JPanel();
         logoLabel = new javax.swing.JLabel();
+        dasboardButton = new javax.swing.JButton();
+        logoInFull = new javax.swing.JLabel();
+        dasboardButton1 = new javax.swing.JButton();
+        dasboardButton2 = new javax.swing.JButton();
+        dasboardButton3 = new javax.swing.JButton();
+        dasboardButton4 = new javax.swing.JButton();
+        dasboardButton5 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        versionLabel = new javax.swing.JLabel();
         motherTab = new javax.swing.JTabbedPane();
         dashboardTab = new javax.swing.JPanel();
         dashboardLabel = new javax.swing.JLabel();
@@ -37,6 +46,7 @@ public class mainFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1570, 900));
+        setResizable(false);
 
         firstLayer.setBackground(new java.awt.Color(102, 102, 0));
         firstLayer.setDoubleBuffered(false);
@@ -50,29 +60,104 @@ public class mainFrame extends javax.swing.JFrame {
         logoLabel.setText("RSM");
         logoLabel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(44, 62, 80), 4, true));
 
+        dasboardButton.setBackground(new java.awt.Color(39, 174, 96));
+        dasboardButton.setFont(new java.awt.Font("SansSerif", 1, 28)); // NOI18N
+        dasboardButton.setForeground(new java.awt.Color(255, 255, 255));
+        dasboardButton.setText("Home");
+
+        logoInFull.setFont(new java.awt.Font("Liberation Sans", 0, 20)); // NOI18N
+        logoInFull.setForeground(new java.awt.Color(243, 156, 18));
+        logoInFull.setText("-- Retail Shop Manager --");
+
+        dasboardButton1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        dasboardButton1.setText("View Stock Summary");
+        dasboardButton1.setAutoscrolls(true);
+
+        dasboardButton2.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        dasboardButton2.setText("Record Daily Sales");
+
+        dasboardButton3.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        dasboardButton3.setLabel("Record Purchases (Stock In)");
+
+        dasboardButton4.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        dasboardButton4.setText("Record Expenses");
+        dasboardButton4.setAutoscrolls(true);
+
+        dasboardButton5.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        dasboardButton5.setText("View Weekly Report");
+        dasboardButton5.setAutoscrolls(true);
+
+        jButton1.setBackground(new java.awt.Color(231, 76, 60));
+        jButton1.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Logout");
+
+        versionLabel.setFont(new java.awt.Font("Noto Sans Display", 0, 15)); // NOI18N
+        versionLabel.setText("Version 0.2");
+
         javax.swing.GroupLayout navigationpanelLayout = new javax.swing.GroupLayout(navigationpanel);
         navigationpanel.setLayout(navigationpanelLayout);
         navigationpanelLayout.setHorizontalGroup(
             navigationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navigationpanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(navigationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(logoInFull, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(logoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navigationpanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(86, 86, 86))
             .addGroup(navigationpanelLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(logoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(navigationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(navigationpanelLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addGroup(navigationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(dasboardButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(dasboardButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(dasboardButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(dasboardButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(dasboardButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(dasboardButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(navigationpanelLayout.createSequentialGroup()
+                        .addGap(122, 122, 122)
+                        .addComponent(versionLabel)))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
         navigationpanelLayout.setVerticalGroup(
             navigationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navigationpanelLayout.createSequentialGroup()
-                .addGap(59, 59, 59)
+                .addGap(29, 29, 29)
                 .addComponent(logoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(735, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(logoInFull)
+                .addGap(49, 49, 49)
+                .addComponent(dasboardButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(dasboardButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(dasboardButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(dasboardButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(dasboardButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(dasboardButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(versionLabel)
+                .addGap(21, 21, 21))
         );
 
-        firstLayer.add(navigationpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 900));
+        firstLayer.add(navigationpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 900));
 
         motherTab.setBackground(new java.awt.Color(51, 0, 204));
 
         dashboardTab.setBackground(new java.awt.Color(52, 73, 94));
 
+        dashboardLabel.setBackground(new java.awt.Color(236, 240, 241));
         dashboardLabel.setFont(new java.awt.Font("URW Bookman", 1, 45)); // NOI18N
         dashboardLabel.setForeground(new java.awt.Color(255, 255, 255));
         dashboardLabel.setText("Dashboard");
@@ -84,7 +169,7 @@ public class mainFrame extends javax.swing.JFrame {
             .addGroup(dashboardTabLayout.createSequentialGroup()
                 .addGap(51, 51, 51)
                 .addComponent(dashboardLabel)
-                .addContainerGap(1023, Short.MAX_VALUE))
+                .addContainerGap(973, Short.MAX_VALUE))
         );
         dashboardTabLayout.setVerticalGroup(
             dashboardTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,7 +187,7 @@ public class mainFrame extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1320, Short.MAX_VALUE)
+            .addGap(0, 1270, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,7 +196,7 @@ public class mainFrame extends javax.swing.JFrame {
 
         motherTab.addTab("tab2", jPanel4);
 
-        firstLayer.add(motherTab, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 1320, 900));
+        firstLayer.add(motherTab, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 1270, 900));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -156,12 +241,21 @@ public class mainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton dasboardButton;
+    private javax.swing.JButton dasboardButton1;
+    private javax.swing.JButton dasboardButton2;
+    private javax.swing.JButton dasboardButton3;
+    private javax.swing.JButton dasboardButton4;
+    private javax.swing.JButton dasboardButton5;
     private javax.swing.JLabel dashboardLabel;
     private javax.swing.JPanel dashboardTab;
     private javax.swing.JPanel firstLayer;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel logoInFull;
     private javax.swing.JLabel logoLabel;
     private javax.swing.JTabbedPane motherTab;
     private javax.swing.JPanel navigationpanel;
+    private javax.swing.JLabel versionLabel;
     // End of variables declaration//GEN-END:variables
 }
