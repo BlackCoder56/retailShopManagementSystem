@@ -89,7 +89,7 @@
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="dasboardButton1" max="32767" attributes="0"/>
-                                  <Component id="dasboardButton2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="recordDailySales_btn" alignment="0" max="32767" attributes="0"/>
                                   <Component id="dasboardButton" alignment="0" max="32767" attributes="0"/>
                                   <Component id="dasboardButton3" alignment="1" max="32767" attributes="0"/>
                                   <Component id="dasboardButton4" alignment="0" max="32767" attributes="0"/>
@@ -115,7 +115,7 @@
                       <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                       <Component id="dasboardButton" min="-2" pref="68" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="dasboardButton2" min="-2" pref="68" max="-2" attributes="0"/>
+                      <Component id="recordDailySales_btn" min="-2" pref="68" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="dasboardButton3" min="-2" pref="68" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -155,7 +155,7 @@
             <Component class="javax.swing.JButton" name="dasboardButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="60" green="ae" red="27" type="rgb"/>
+                  <Color blue="5e" green="49" red="34" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="SansSerif" size="28" style="1"/>
@@ -186,13 +186,17 @@
                 <Property name="autoscrolls" type="boolean" value="true"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="dasboardButton2">
+            <Component class="javax.swing.JButton" name="recordDailySales_btn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="SansSerif" size="18" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Record Daily Sales"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="recordDailySales_btnMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="recordDailySales_btnMouseExited"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="dasboardButton3">
               <Properties>

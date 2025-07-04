@@ -2,6 +2,10 @@ package viewpackage;
 
 //import javax.swing.JFrame; 
 
+import java.awt.Color;
+
+
+
 /**
  *
  * @author elisha
@@ -17,7 +21,7 @@ public class mainFrame extends javax.swing.JFrame {
         initComponents();
 //        this.setExtendedState(JFrame.MAXIMIZED_BOTH); // code making the frame full screen
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,7 +37,7 @@ public class mainFrame extends javax.swing.JFrame {
         dasboardButton = new javax.swing.JButton();
         logoInFull = new javax.swing.JLabel();
         dasboardButton1 = new javax.swing.JButton();
-        dasboardButton2 = new javax.swing.JButton();
+        recordDailySales_btn = new javax.swing.JButton();
         dasboardButton3 = new javax.swing.JButton();
         dasboardButton4 = new javax.swing.JButton();
         dasboardButton5 = new javax.swing.JButton();
@@ -60,7 +64,7 @@ public class mainFrame extends javax.swing.JFrame {
         logoLabel.setText("RSM");
         logoLabel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(44, 62, 80), 4, true));
 
-        dasboardButton.setBackground(new java.awt.Color(39, 174, 96));
+        dasboardButton.setBackground(new java.awt.Color(52, 73, 94));
         dasboardButton.setFont(new java.awt.Font("SansSerif", 1, 28)); // NOI18N
         dasboardButton.setForeground(new java.awt.Color(255, 255, 255));
         dasboardButton.setText("Home");
@@ -73,8 +77,16 @@ public class mainFrame extends javax.swing.JFrame {
         dasboardButton1.setText("View Stock Summary");
         dasboardButton1.setAutoscrolls(true);
 
-        dasboardButton2.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        dasboardButton2.setText("Record Daily Sales");
+        recordDailySales_btn.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        recordDailySales_btn.setText("Record Daily Sales");
+        recordDailySales_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                recordDailySales_btnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                recordDailySales_btnMouseExited(evt);
+            }
+        });
 
         dasboardButton3.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         dasboardButton3.setLabel("Record Purchases (Stock In)");
@@ -115,7 +127,7 @@ public class mainFrame extends javax.swing.JFrame {
                         .addGap(39, 39, 39)
                         .addGroup(navigationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(dasboardButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dasboardButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(recordDailySales_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(dasboardButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(dasboardButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(dasboardButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -135,7 +147,7 @@ public class mainFrame extends javax.swing.JFrame {
                 .addGap(49, 49, 49)
                 .addComponent(dasboardButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(dasboardButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(recordDailySales_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(dasboardButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -215,6 +227,17 @@ public class mainFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+//    Hover effect on buttons
+    private void recordDailySales_btnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recordDailySales_btnMouseEntered
+       recordDailySales_btn.setBackground(Color.GREEN);
+       recordDailySales_btn.setForeground(Color.white);
+    }//GEN-LAST:event_recordDailySales_btnMouseEntered
+
+    private void recordDailySales_btnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recordDailySales_btnMouseExited
+        recordDailySales_btn.setBackground(Color.white);
+        recordDailySales_btn.setForeground(Color.black);
+    }//GEN-LAST:event_recordDailySales_btnMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -243,7 +266,6 @@ public class mainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton dasboardButton;
     private javax.swing.JButton dasboardButton1;
-    private javax.swing.JButton dasboardButton2;
     private javax.swing.JButton dasboardButton3;
     private javax.swing.JButton dasboardButton4;
     private javax.swing.JButton dasboardButton5;
@@ -256,6 +278,7 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel logoLabel;
     private javax.swing.JTabbedPane motherTab;
     private javax.swing.JPanel navigationpanel;
+    private javax.swing.JButton recordDailySales_btn;
     private javax.swing.JLabel versionLabel;
     // End of variables declaration//GEN-END:variables
 }
