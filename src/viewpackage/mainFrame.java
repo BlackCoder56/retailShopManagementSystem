@@ -36,12 +36,12 @@ public class mainFrame extends javax.swing.JFrame {
         logoLabel = new javax.swing.JLabel();
         dasboardButton = new javax.swing.JButton();
         logoInFull = new javax.swing.JLabel();
-        dasboardButton1 = new javax.swing.JButton();
+        viewStockSummary_btn = new javax.swing.JButton();
         recordDailySales_btn = new javax.swing.JButton();
-        dasboardButton3 = new javax.swing.JButton();
-        dasboardButton4 = new javax.swing.JButton();
-        dasboardButton5 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        recordPurchases_btn = new javax.swing.JButton();
+        recordExpenses_btn = new javax.swing.JButton();
+        viewWeeklyReport_btn = new javax.swing.JButton();
+        logout_btn = new javax.swing.JButton();
         versionLabel = new javax.swing.JLabel();
         motherTab = new javax.swing.JTabbedPane();
         dashboardTab = new javax.swing.JPanel();
@@ -73,9 +73,9 @@ public class mainFrame extends javax.swing.JFrame {
         logoInFull.setForeground(new java.awt.Color(243, 156, 18));
         logoInFull.setText("-- Retail Shop Manager --");
 
-        dasboardButton1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        dasboardButton1.setText("View Stock Summary");
-        dasboardButton1.setAutoscrolls(true);
+        viewStockSummary_btn.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        viewStockSummary_btn.setText("View Stock Summary");
+        viewStockSummary_btn.setAutoscrolls(true);
 
         recordDailySales_btn.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         recordDailySales_btn.setText("Record Daily Sales");
@@ -88,21 +88,21 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
-        dasboardButton3.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        dasboardButton3.setLabel("Record Purchases (Stock In)");
+        recordPurchases_btn.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        recordPurchases_btn.setLabel("Record Purchases (Stock In)");
 
-        dasboardButton4.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        dasboardButton4.setText("Record Expenses");
-        dasboardButton4.setAutoscrolls(true);
+        recordExpenses_btn.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        recordExpenses_btn.setText("Record Expenses");
+        recordExpenses_btn.setAutoscrolls(true);
 
-        dasboardButton5.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        dasboardButton5.setText("View Weekly Report");
-        dasboardButton5.setAutoscrolls(true);
+        viewWeeklyReport_btn.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        viewWeeklyReport_btn.setText("View Weekly Report");
+        viewWeeklyReport_btn.setAutoscrolls(true);
 
-        jButton1.setBackground(new java.awt.Color(231, 76, 60));
-        jButton1.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Logout");
+        logout_btn.setBackground(new java.awt.Color(231, 76, 60));
+        logout_btn.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
+        logout_btn.setForeground(new java.awt.Color(255, 255, 255));
+        logout_btn.setText("Logout");
 
         versionLabel.setFont(new java.awt.Font("Noto Sans Display", 0, 15)); // NOI18N
         versionLabel.setText("Version 0.2");
@@ -119,19 +119,19 @@ public class mainFrame extends javax.swing.JFrame {
                 .addGap(40, 40, 40))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navigationpanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logout_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(86, 86, 86))
             .addGroup(navigationpanelLayout.createSequentialGroup()
                 .addGroup(navigationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(navigationpanelLayout.createSequentialGroup()
                         .addGap(39, 39, 39)
                         .addGroup(navigationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(dasboardButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(viewStockSummary_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(recordDailySales_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(dasboardButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dasboardButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dasboardButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dasboardButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(recordPurchases_btn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(recordExpenses_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(viewWeeklyReport_btn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(navigationpanelLayout.createSequentialGroup()
                         .addGap(122, 122, 122)
                         .addComponent(versionLabel)))
@@ -149,15 +149,15 @@ public class mainFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(recordDailySales_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(dasboardButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(recordPurchases_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(dasboardButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(recordExpenses_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(dasboardButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(viewWeeklyReport_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(dasboardButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(viewStockSummary_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logout_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(versionLabel)
                 .addGap(21, 21, 21))
@@ -265,20 +265,20 @@ public class mainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton dasboardButton;
-    private javax.swing.JButton dasboardButton1;
-    private javax.swing.JButton dasboardButton3;
-    private javax.swing.JButton dasboardButton4;
-    private javax.swing.JButton dasboardButton5;
     private javax.swing.JLabel dashboardLabel;
     private javax.swing.JPanel dashboardTab;
     private javax.swing.JPanel firstLayer;
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel logoInFull;
     private javax.swing.JLabel logoLabel;
+    private javax.swing.JButton logout_btn;
     private javax.swing.JTabbedPane motherTab;
     private javax.swing.JPanel navigationpanel;
     private javax.swing.JButton recordDailySales_btn;
+    private javax.swing.JButton recordExpenses_btn;
+    private javax.swing.JButton recordPurchases_btn;
     private javax.swing.JLabel versionLabel;
+    private javax.swing.JButton viewStockSummary_btn;
+    private javax.swing.JButton viewWeeklyReport_btn;
     // End of variables declaration//GEN-END:variables
 }

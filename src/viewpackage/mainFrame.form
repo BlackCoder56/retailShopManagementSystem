@@ -80,7 +80,7 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="146" max="-2" attributes="0"/>
+                      <Component id="logout_btn" min="-2" pref="146" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
@@ -88,12 +88,12 @@
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="dasboardButton1" max="32767" attributes="0"/>
+                                  <Component id="viewStockSummary_btn" max="32767" attributes="0"/>
                                   <Component id="recordDailySales_btn" alignment="0" max="32767" attributes="0"/>
                                   <Component id="dasboardButton" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="dasboardButton3" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="dasboardButton4" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="dasboardButton5" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="recordPurchases_btn" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="recordExpenses_btn" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="viewWeeklyReport_btn" alignment="1" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -117,15 +117,15 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="recordDailySales_btn" min="-2" pref="68" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="dasboardButton3" min="-2" pref="68" max="-2" attributes="0"/>
+                      <Component id="recordPurchases_btn" min="-2" pref="68" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="dasboardButton4" min="-2" pref="68" max="-2" attributes="0"/>
+                      <Component id="recordExpenses_btn" min="-2" pref="68" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="dasboardButton5" min="-2" pref="68" max="-2" attributes="0"/>
+                      <Component id="viewWeeklyReport_btn" min="-2" pref="68" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="dasboardButton1" min="-2" pref="68" max="-2" attributes="0"/>
+                      <Component id="viewStockSummary_btn" min="-2" pref="68" max="-2" attributes="0"/>
                       <EmptySpace pref="74" max="32767" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="54" max="-2" attributes="0"/>
+                      <Component id="logout_btn" min="-2" pref="54" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="versionLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
@@ -177,7 +177,7 @@
                 <Property name="text" type="java.lang.String" value="-- Retail Shop Manager --"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="dasboardButton1">
+            <Component class="javax.swing.JButton" name="viewStockSummary_btn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="SansSerif" size="18" style="0"/>
@@ -198,7 +198,7 @@
                 <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="recordDailySales_btnMouseExited"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="dasboardButton3">
+            <Component class="javax.swing.JButton" name="recordPurchases_btn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="SansSerif" size="18" style="0"/>
@@ -206,7 +206,7 @@
                 <Property name="label" type="java.lang.String" value="Record Purchases (Stock In)"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="dasboardButton4">
+            <Component class="javax.swing.JButton" name="recordExpenses_btn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="SansSerif" size="18" style="0"/>
@@ -215,7 +215,7 @@
                 <Property name="autoscrolls" type="boolean" value="true"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="dasboardButton5">
+            <Component class="javax.swing.JButton" name="viewWeeklyReport_btn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="SansSerif" size="18" style="0"/>
@@ -224,7 +224,7 @@
                 <Property name="autoscrolls" type="boolean" value="true"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="logout_btn">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="3c" green="4c" red="e7" type="rgb"/>
