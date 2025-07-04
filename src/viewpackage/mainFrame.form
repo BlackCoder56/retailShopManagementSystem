@@ -101,7 +101,7 @@
                               <Component id="versionLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                      <EmptySpace pref="12" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -180,20 +180,25 @@
             <Component class="javax.swing.JButton" name="viewStockSummary_btn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="SansSerif" size="18" style="0"/>
+                  <Font name="SansSerif" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="View Stock Summary"/>
                 <Property name="autoscrolls" type="boolean" value="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="viewStockSummary_btnMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="viewStockSummary_btnMouseExited"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="recordDailySales_btn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="SansSerif" size="18" style="0"/>
+                  <Font name="SansSerif" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Record Daily Sales"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="recordDailySales_btnMouseClicked"/>
                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="recordDailySales_btnMouseEntered"/>
                 <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="recordDailySales_btnMouseExited"/>
               </Events>
@@ -201,28 +206,40 @@
             <Component class="javax.swing.JButton" name="recordPurchases_btn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="SansSerif" size="18" style="0"/>
+                  <Font name="SansSerif" size="18" style="1"/>
                 </Property>
                 <Property name="label" type="java.lang.String" value="Record Purchases (Stock In)"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="recordPurchases_btnMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="recordPurchases_btnMouseExited"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="recordExpenses_btn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="SansSerif" size="18" style="0"/>
+                  <Font name="SansSerif" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Record Expenses"/>
                 <Property name="autoscrolls" type="boolean" value="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="recordExpenses_btnMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="recordExpenses_btnMouseExited"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="viewWeeklyReport_btn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="SansSerif" size="18" style="0"/>
+                  <Font name="SansSerif" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="View Weekly Report"/>
                 <Property name="autoscrolls" type="boolean" value="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="viewWeeklyReport_btnMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="viewWeeklyReport_btnMouseExited"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="logout_btn">
               <Properties>

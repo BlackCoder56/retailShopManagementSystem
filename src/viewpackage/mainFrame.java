@@ -22,6 +22,10 @@ public class mainFrame extends javax.swing.JFrame {
 //        this.setExtendedState(JFrame.MAXIMIZED_BOTH); // code making the frame full screen
     }
     
+//    Color RGB value
+    String bgHover_rgb_color = "#324A69";
+    String bgActive_rgb_color = "#34495E";
+//    get boolean variable to store the active button. the button that is active will have a true when clicked
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -73,13 +77,24 @@ public class mainFrame extends javax.swing.JFrame {
         logoInFull.setForeground(new java.awt.Color(243, 156, 18));
         logoInFull.setText("-- Retail Shop Manager --");
 
-        viewStockSummary_btn.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        viewStockSummary_btn.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         viewStockSummary_btn.setText("View Stock Summary");
         viewStockSummary_btn.setAutoscrolls(true);
+        viewStockSummary_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                viewStockSummary_btnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                viewStockSummary_btnMouseExited(evt);
+            }
+        });
 
-        recordDailySales_btn.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        recordDailySales_btn.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         recordDailySales_btn.setText("Record Daily Sales");
         recordDailySales_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                recordDailySales_btnMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 recordDailySales_btnMouseEntered(evt);
             }
@@ -88,16 +103,40 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
-        recordPurchases_btn.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        recordPurchases_btn.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         recordPurchases_btn.setLabel("Record Purchases (Stock In)");
+        recordPurchases_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                recordPurchases_btnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                recordPurchases_btnMouseExited(evt);
+            }
+        });
 
-        recordExpenses_btn.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        recordExpenses_btn.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         recordExpenses_btn.setText("Record Expenses");
         recordExpenses_btn.setAutoscrolls(true);
+        recordExpenses_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                recordExpenses_btnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                recordExpenses_btnMouseExited(evt);
+            }
+        });
 
-        viewWeeklyReport_btn.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        viewWeeklyReport_btn.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         viewWeeklyReport_btn.setText("View Weekly Report");
         viewWeeklyReport_btn.setAutoscrolls(true);
+        viewWeeklyReport_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                viewWeeklyReport_btnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                viewWeeklyReport_btnMouseExited(evt);
+            }
+        });
 
         logout_btn.setBackground(new java.awt.Color(231, 76, 60));
         logout_btn.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
@@ -135,7 +174,7 @@ public class mainFrame extends javax.swing.JFrame {
                     .addGroup(navigationpanelLayout.createSequentialGroup()
                         .addGap(122, 122, 122)
                         .addComponent(versionLabel)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         navigationpanelLayout.setVerticalGroup(
             navigationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,14 +268,60 @@ public class mainFrame extends javax.swing.JFrame {
 
 //    Hover effect on buttons
     private void recordDailySales_btnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recordDailySales_btnMouseEntered
-       recordDailySales_btn.setBackground(Color.GREEN);
-       recordDailySales_btn.setForeground(Color.white);
+        recordDailySales_btn.setBackground(Color.decode(bgHover_rgb_color));
+        recordDailySales_btn.setForeground(Color.white);
     }//GEN-LAST:event_recordDailySales_btnMouseEntered
 
     private void recordDailySales_btnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recordDailySales_btnMouseExited
-        recordDailySales_btn.setBackground(Color.white);
+        recordDailySales_btn.setBackground(Color.decode("#FFFFFF"));
         recordDailySales_btn.setForeground(Color.black);
     }//GEN-LAST:event_recordDailySales_btnMouseExited
+
+    private void recordPurchases_btnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recordPurchases_btnMouseEntered
+        recordPurchases_btn.setBackground(Color.decode(bgHover_rgb_color));
+        recordPurchases_btn.setForeground(Color.white);
+    }//GEN-LAST:event_recordPurchases_btnMouseEntered
+
+    private void recordPurchases_btnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recordPurchases_btnMouseExited
+        recordPurchases_btn.setBackground(Color.white);
+        recordPurchases_btn.setForeground(Color.black);
+    }//GEN-LAST:event_recordPurchases_btnMouseExited
+
+    private void recordExpenses_btnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recordExpenses_btnMouseEntered
+       recordExpenses_btn.setBackground(Color.decode(bgHover_rgb_color));
+       recordExpenses_btn.setForeground(Color.white);
+    }//GEN-LAST:event_recordExpenses_btnMouseEntered
+
+    private void recordExpenses_btnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recordExpenses_btnMouseExited
+        recordExpenses_btn.setBackground(Color.white);
+        recordExpenses_btn.setForeground(Color.black);
+    }//GEN-LAST:event_recordExpenses_btnMouseExited
+
+    private void viewWeeklyReport_btnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewWeeklyReport_btnMouseEntered
+        viewWeeklyReport_btn.setBackground(Color.decode(bgHover_rgb_color));
+        viewWeeklyReport_btn.setForeground(Color.white);
+    }//GEN-LAST:event_viewWeeklyReport_btnMouseEntered
+
+    private void viewWeeklyReport_btnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewWeeklyReport_btnMouseExited
+        viewWeeklyReport_btn.setBackground(Color.white);
+        viewWeeklyReport_btn.setForeground(Color.black);
+    }//GEN-LAST:event_viewWeeklyReport_btnMouseExited
+
+    private void viewStockSummary_btnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewStockSummary_btnMouseEntered
+        viewStockSummary_btn.setBackground(Color.decode(bgHover_rgb_color));
+        viewStockSummary_btn.setForeground(Color.white);
+    }//GEN-LAST:event_viewStockSummary_btnMouseEntered
+
+    private void viewStockSummary_btnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewStockSummary_btnMouseExited
+        viewStockSummary_btn.setBackground(Color.white);
+        viewStockSummary_btn.setForeground(Color.black);
+    }//GEN-LAST:event_viewStockSummary_btnMouseExited
+
+    private void recordDailySales_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recordDailySales_btnMouseClicked
+        recordDailySales_btn.setBackground(Color.decode(bgActive_rgb_color));
+        recordDailySales_btn.setForeground(Color.white);
+        System.out.println("Works");
+    }//GEN-LAST:event_recordDailySales_btnMouseClicked
 
     /**
      * @param args the command line arguments
