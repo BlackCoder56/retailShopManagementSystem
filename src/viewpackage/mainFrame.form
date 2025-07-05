@@ -90,7 +90,7 @@
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="viewStockSummary_btn" max="32767" attributes="0"/>
                                   <Component id="recordDailySales_btn" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="dasboardButton" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="dashboardButton" alignment="0" max="32767" attributes="0"/>
                                   <Component id="recordPurchases_btn" alignment="1" max="32767" attributes="0"/>
                                   <Component id="recordExpenses_btn" alignment="0" max="32767" attributes="0"/>
                                   <Component id="viewWeeklyReport_btn" alignment="1" max="32767" attributes="0"/>
@@ -113,7 +113,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="logoInFull" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                      <Component id="dasboardButton" min="-2" pref="68" max="-2" attributes="0"/>
+                      <Component id="dashboardButton" min="-2" pref="68" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="recordDailySales_btn" min="-2" pref="68" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -152,7 +152,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="dasboardButton">
+            <Component class="javax.swing.JButton" name="dashboardButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="5e" green="49" red="34" type="rgb"/>
@@ -254,6 +254,10 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Logout"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="logout_btnMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="logout_btnMouseExited"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="versionLabel">
               <Properties>
