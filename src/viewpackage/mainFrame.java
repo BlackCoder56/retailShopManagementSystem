@@ -4,6 +4,8 @@ package viewpackage;
 
 import java.awt.Color;
 import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 
 
@@ -209,6 +211,9 @@ public class mainFrame extends javax.swing.JFrame {
         logout_btn.setForeground(new java.awt.Color(255, 255, 255));
         logout_btn.setText("Logout");
         logout_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logout_btnMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 logout_btnMouseEntered(evt);
             }
@@ -292,16 +297,16 @@ public class mainFrame extends javax.swing.JFrame {
         dashboardTabLayout.setHorizontalGroup(
             dashboardTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dashboardTabLayout.createSequentialGroup()
-                .addGap(51, 51, 51)
+                .addGap(72, 72, 72)
                 .addComponent(dashboardLabel)
-                .addContainerGap(973, Short.MAX_VALUE))
+                .addContainerGap(952, Short.MAX_VALUE))
         );
         dashboardTabLayout.setVerticalGroup(
             dashboardTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dashboardTabLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addGap(50, 50, 50)
                 .addComponent(dashboardLabel)
-                .addContainerGap(793, Short.MAX_VALUE))
+                .addContainerGap(800, Short.MAX_VALUE))
         );
 
         motherTab.addTab("dashboard", dashboardTab);
@@ -316,12 +321,12 @@ public class mainFrame extends javax.swing.JFrame {
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 865, Short.MAX_VALUE)
+            .addGap(0, 905, Short.MAX_VALUE)
         );
 
         motherTab.addTab("tab2", jPanel4);
 
-        firstLayer.add(motherTab, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 1270, 900));
+        firstLayer.add(motherTab, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, -40, 1270, 940));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -404,6 +409,30 @@ public class mainFrame extends javax.swing.JFrame {
     private void logout_btnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logout_btnMouseExited
         logout_btn.setBackground(Color.decode("#E74C3C"));
     }//GEN-LAST:event_logout_btnMouseExited
+
+    private void logout_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logout_btnMouseClicked
+         JDialog dialog = new JDialog();
+         dialog.setUndecorated(true); // Removes title bar (including close and minize buttons)
+        
+        int response = JOptionPane.showConfirmDialog(
+                dialog,
+                "Are you sure you want to logout?",
+                "Confirm", 
+                JOptionPane.YES_NO_OPTION);
+        
+        if (response == JOptionPane.YES_OPTION) {
+             try {
+                 Thread.sleep(100); // Delay for  100 milisecods
+             } catch (InterruptedException ex) {
+                 System.getLogger(mainFrame.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+             }
+             
+            this.dispose(); // closes the main app window
+            
+        } else {
+//            Nothing happens
+        }
+    }//GEN-LAST:event_logout_btnMouseClicked
 
     /**
      * @param args the command line arguments
