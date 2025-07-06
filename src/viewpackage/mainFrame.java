@@ -427,7 +427,7 @@ public class mainFrame extends javax.swing.JFrame {
                  System.getLogger(mainFrame.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
              }
              
-            this.dispose(); // closes the main app window
+            System.exit(0); // closes the main app window
             
         } else {
 //            Nothing happens
