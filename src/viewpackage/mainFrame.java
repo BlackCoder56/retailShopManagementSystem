@@ -6,6 +6,7 @@ import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
+import javax.swing.JTabbedPane;
 
 
 
@@ -37,13 +38,12 @@ public class mainFrame extends javax.swing.JFrame {
     */
 
     private void buttonEffectCall(){
-        setupButton(dashboardButton);
-        setupButton(recordDailySales_btn);
-        setupButton(recordPurchases_btn);
-        setupButton(recordExpenses_btn);
-        setupButton(viewWeeklyReport_btn);
-        setupButton(viewStockSummary_btn);
-        setupButton(viewStockSummary_btn);       
+        setupButton(dashboardButton, 0);
+        setupButton(recordDailySales_btn, 1);
+        setupButton(recordPurchases_btn,2);
+        setupButton(recordExpenses_btn,3);
+        setupButton(viewWeeklyReport_btn,4);
+        setupButton(viewStockSummary_btn,5);
     }
     
     
@@ -52,7 +52,7 @@ public class mainFrame extends javax.swing.JFrame {
     /*
     *   This function is handling the hover and active button effects 
     */
-    private void setupButton(JButton button) {
+    private void setupButton(JButton button, int tabIndex) {
         Color defaultColor = new Color(240, 240, 240); // Default button color
         String hoverColor = "#324A69"; // Hover color
         String activeColor = "#34495E"; // Active color
@@ -88,6 +88,7 @@ public class mainFrame extends javax.swing.JFrame {
                 activeButton = button;
                 activeButton.setBackground(Color.decode(activeColor));
                 activeButton.setForeground(Color.white);
+                motherTab.setSelectedIndex(tabIndex);
             }
         });
     }
@@ -118,7 +119,16 @@ public class mainFrame extends javax.swing.JFrame {
         motherTab = new javax.swing.JTabbedPane();
         dashboardTab = new javax.swing.JPanel();
         dashboardLabel = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        recordDailySales = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        recordPurchases = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        recordExpenses = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        viewWeeklyReport = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        stockTab = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1570, 900));
@@ -311,20 +321,120 @@ public class mainFrame extends javax.swing.JFrame {
 
         motherTab.addTab("dashboard", dashboardTab);
 
-        jPanel4.setBackground(new java.awt.Color(52, 73, 94));
+        recordDailySales.setBackground(new java.awt.Color(52, 73, 94));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1270, Short.MAX_VALUE)
+        jLabel1.setText("1");
+
+        javax.swing.GroupLayout recordDailySalesLayout = new javax.swing.GroupLayout(recordDailySales);
+        recordDailySales.setLayout(recordDailySalesLayout);
+        recordDailySalesLayout.setHorizontalGroup(
+            recordDailySalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(recordDailySalesLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel1)
+                .addContainerGap(1217, Short.MAX_VALUE))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 905, Short.MAX_VALUE)
+        recordDailySalesLayout.setVerticalGroup(
+            recordDailySalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(recordDailySalesLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jLabel1)
+                .addContainerGap(838, Short.MAX_VALUE))
         );
 
-        motherTab.addTab("tab2", jPanel4);
+        motherTab.addTab("recordDailySales", recordDailySales);
+
+        recordPurchases.setBackground(new java.awt.Color(52, 73, 94));
+
+        jLabel2.setText("2");
+
+        javax.swing.GroupLayout recordPurchasesLayout = new javax.swing.GroupLayout(recordPurchases);
+        recordPurchases.setLayout(recordPurchasesLayout);
+        recordPurchasesLayout.setHorizontalGroup(
+            recordPurchasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(recordPurchasesLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel2)
+                .addContainerGap(1217, Short.MAX_VALUE))
+        );
+        recordPurchasesLayout.setVerticalGroup(
+            recordPurchasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(recordPurchasesLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jLabel2)
+                .addContainerGap(838, Short.MAX_VALUE))
+        );
+
+        motherTab.addTab("purchaseRecords", recordPurchases);
+
+        recordExpenses.setBackground(new java.awt.Color(52, 73, 94));
+
+        jLabel3.setText("3");
+
+        javax.swing.GroupLayout recordExpensesLayout = new javax.swing.GroupLayout(recordExpenses);
+        recordExpenses.setLayout(recordExpensesLayout);
+        recordExpensesLayout.setHorizontalGroup(
+            recordExpensesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(recordExpensesLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel3)
+                .addContainerGap(1217, Short.MAX_VALUE))
+        );
+        recordExpensesLayout.setVerticalGroup(
+            recordExpensesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(recordExpensesLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jLabel3)
+                .addContainerGap(838, Short.MAX_VALUE))
+        );
+
+        motherTab.addTab("recordExpenses", recordExpenses);
+
+        viewWeeklyReport.setBackground(new java.awt.Color(52, 73, 94));
+
+        jLabel4.setText("4");
+
+        javax.swing.GroupLayout viewWeeklyReportLayout = new javax.swing.GroupLayout(viewWeeklyReport);
+        viewWeeklyReport.setLayout(viewWeeklyReportLayout);
+        viewWeeklyReportLayout.setHorizontalGroup(
+            viewWeeklyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewWeeklyReportLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel4)
+                .addContainerGap(1217, Short.MAX_VALUE))
+        );
+        viewWeeklyReportLayout.setVerticalGroup(
+            viewWeeklyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewWeeklyReportLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jLabel4)
+                .addContainerGap(838, Short.MAX_VALUE))
+        );
+
+        motherTab.addTab("viewWeeklyReport", viewWeeklyReport);
+
+        stockTab.setBackground(new java.awt.Color(52, 73, 94));
+
+        jLabel5.setText("5");
+
+        javax.swing.GroupLayout stockTabLayout = new javax.swing.GroupLayout(stockTab);
+        stockTab.setLayout(stockTabLayout);
+        stockTabLayout.setHorizontalGroup(
+            stockTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(stockTabLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel5)
+                .addContainerGap(1217, Short.MAX_VALUE))
+        );
+        stockTabLayout.setVerticalGroup(
+            stockTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(stockTabLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jLabel5)
+                .addContainerGap(838, Short.MAX_VALUE))
+        );
+
+        motherTab.addTab("stockTabe", stockTab);
 
         firstLayer.add(motherTab, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, -40, 1270, 940));
 
@@ -416,8 +526,8 @@ public class mainFrame extends javax.swing.JFrame {
         
         int response = JOptionPane.showConfirmDialog(
                 dialog,
-                "Are you sure you want to logout?",
-                "Confirm", 
+                "Do you want to logout?",
+                "Confirm Logout!", 
                 JOptionPane.YES_NO_OPTION);
         
         if (response == JOptionPane.YES_OPTION) {
@@ -464,17 +574,26 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel dashboardLabel;
     private javax.swing.JPanel dashboardTab;
     private javax.swing.JPanel firstLayer;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel logoInFull;
     private javax.swing.JLabel logoLabel;
     private javax.swing.JButton logout_btn;
     private javax.swing.JTabbedPane motherTab;
     private javax.swing.JPanel navigationpanel;
+    private javax.swing.JPanel recordDailySales;
     private javax.swing.JButton recordDailySales_btn;
+    private javax.swing.JPanel recordExpenses;
     private javax.swing.JButton recordExpenses_btn;
+    private javax.swing.JPanel recordPurchases;
     private javax.swing.JButton recordPurchases_btn;
+    private javax.swing.JPanel stockTab;
     private javax.swing.JLabel versionLabel;
     private javax.swing.JButton viewStockSummary_btn;
+    private javax.swing.JPanel viewWeeklyReport;
     private javax.swing.JButton viewWeeklyReport_btn;
     // End of variables declaration//GEN-END:variables
 }
