@@ -6,7 +6,6 @@ import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
-import javax.swing.JTabbedPane;
 
 
 
@@ -121,6 +120,7 @@ public class mainFrame extends javax.swing.JFrame {
         dashboardLabel = new javax.swing.JLabel();
         recordDailySales = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         recordPurchases = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         recordExpenses = new javax.swing.JPanel();
@@ -307,9 +307,9 @@ public class mainFrame extends javax.swing.JFrame {
         dashboardTabLayout.setHorizontalGroup(
             dashboardTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dashboardTabLayout.createSequentialGroup()
-                .addGap(72, 72, 72)
+                .addGap(47, 47, 47)
                 .addComponent(dashboardLabel)
-                .addContainerGap(952, Short.MAX_VALUE))
+                .addContainerGap(977, Short.MAX_VALUE))
         );
         dashboardTabLayout.setVerticalGroup(
             dashboardTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -323,7 +323,15 @@ public class mainFrame extends javax.swing.JFrame {
 
         recordDailySales.setBackground(new java.awt.Color(52, 73, 94));
 
-        jLabel1.setText("1");
+        jLabel1.setBackground(new java.awt.Color(236, 240, 241));
+        jLabel1.setFont(new java.awt.Font("URW Bookman", 1, 45)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Record Daily Sales (CashOut)");
+
+        jButton2.setBackground(new java.awt.Color(39, 174, 96));
+        jButton2.setFont(new java.awt.Font("URW Bookman", 1, 36)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("+ Register Cashout");
 
         javax.swing.GroupLayout recordDailySalesLayout = new javax.swing.GroupLayout(recordDailySales);
         recordDailySales.setLayout(recordDailySalesLayout);
@@ -332,14 +340,20 @@ public class mainFrame extends javax.swing.JFrame {
             .addGroup(recordDailySalesLayout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addComponent(jLabel1)
-                .addContainerGap(1217, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, recordDailySalesLayout.createSequentialGroup()
+                .addContainerGap(378, Short.MAX_VALUE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(504, 504, 504))
         );
         recordDailySalesLayout.setVerticalGroup(
             recordDailySalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(recordDailySalesLayout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addComponent(jLabel1)
-                .addContainerGap(838, Short.MAX_VALUE))
+                .addGap(40, 40, 40)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(665, Short.MAX_VALUE))
         );
 
         motherTab.addTab("recordDailySales", recordDailySales);
@@ -574,6 +588,7 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel dashboardLabel;
     private javax.swing.JPanel dashboardTab;
     private javax.swing.JPanel firstLayer;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
