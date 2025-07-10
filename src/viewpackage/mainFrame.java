@@ -120,7 +120,17 @@ public class mainFrame extends javax.swing.JFrame {
         dashboardLabel = new javax.swing.JLabel();
         recordDailySales = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        cashout_btn = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        dailyCashout_tbl = new javax.swing.JTable();
+        sorting_combobox = new javax.swing.JComboBox<>();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        weekly_cashout_summary_label = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        monthly_sales_summary_label = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         recordPurchases = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         recordExpenses = new javax.swing.JPanel();
@@ -328,23 +338,115 @@ public class mainFrame extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Record Daily Sales (CashOut)");
 
-        jButton2.setBackground(new java.awt.Color(39, 174, 96));
-        jButton2.setFont(new java.awt.Font("URW Bookman", 1, 36)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("+ Register Cashout");
+        cashout_btn.setBackground(new java.awt.Color(13, 107, 53));
+        cashout_btn.setFont(new java.awt.Font("URW Bookman", 1, 36)); // NOI18N
+        cashout_btn.setForeground(new java.awt.Color(255, 255, 255));
+        cashout_btn.setText("+ Register Cashout");
+
+        dailyCashout_tbl.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Date", "Amount (shs)", "Action"
+            }
+        ));
+        jScrollPane1.setViewportView(dailyCashout_tbl);
+
+        sorting_combobox.setFont(new java.awt.Font("URW Bookman", 0, 18)); // NOI18N
+        sorting_combobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sort By", "Most Recent", "Oldest" }));
+
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(241, 196, 15), 6, true));
+
+        jLabel7.setFont(new java.awt.Font("URW Bookman", 1, 27)); // NOI18N
+        jLabel7.setText("SALES SUMARY");
+
+        weekly_cashout_summary_label.setFont(new java.awt.Font("URW Bookman", 1, 18)); // NOI18N
+        weekly_cashout_summary_label.setForeground(new java.awt.Color(39, 174, 96));
+        weekly_cashout_summary_label.setText("Shs. 1,845,000");
+
+        jLabel9.setFont(new java.awt.Font("URW Bookman", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(44, 62, 80));
+        jLabel9.setText("Weekly Sales Total");
+
+        monthly_sales_summary_label.setFont(new java.awt.Font("URW Bookman", 1, 18)); // NOI18N
+        monthly_sales_summary_label.setForeground(new java.awt.Color(39, 174, 96));
+        monthly_sales_summary_label.setText("Shs. 6,845,000");
+
+        jLabel11.setFont(new java.awt.Font("URW Bookman", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(44, 62, 80));
+        jLabel11.setText("Monthly Sales Total");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(jLabel7))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(monthly_sales_summary_label)
+                            .addComponent(jLabel11)
+                            .addComponent(weekly_cashout_summary_label))))
+                .addContainerGap(15, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(27, 27, 27)
+                    .addComponent(jLabel9)
+                    .addContainerGap(53, Short.MAX_VALUE)))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(weekly_cashout_summary_label)
+                .addGap(39, 39, 39)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(monthly_sales_summary_label)
+                .addContainerGap(29, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(85, 85, 85)
+                    .addComponent(jLabel9)
+                    .addContainerGap(150, Short.MAX_VALUE)))
+        );
+
+        jLabel8.setFont(new java.awt.Font("URW Bookman", 1, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(236, 240, 241));
+        jLabel8.setText("Recent Records");
 
         javax.swing.GroupLayout recordDailySalesLayout = new javax.swing.GroupLayout(recordDailySales);
         recordDailySales.setLayout(recordDailySalesLayout);
         recordDailySalesLayout.setHorizontalGroup(
             recordDailySalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(recordDailySalesLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, recordDailySalesLayout.createSequentialGroup()
-                .addContainerGap(378, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(504, 504, 504))
+                .addGroup(recordDailySalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(recordDailySalesLayout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addGroup(recordDailySalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addGroup(recordDailySalesLayout.createSequentialGroup()
+                                .addGroup(recordDailySalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(sorting_combobox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 861, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(recordDailySalesLayout.createSequentialGroup()
+                        .addGap(256, 256, 256)
+                        .addComponent(cashout_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(80, Short.MAX_VALUE))
+            .addGroup(recordDailySalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(recordDailySalesLayout.createSequentialGroup()
+                    .addGap(55, 55, 55)
+                    .addComponent(jLabel8)
+                    .addContainerGap(1019, Short.MAX_VALUE)))
         );
         recordDailySalesLayout.setVerticalGroup(
             recordDailySalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -352,8 +454,19 @@ public class mainFrame extends javax.swing.JFrame {
                 .addGap(49, 49, 49)
                 .addComponent(jLabel1)
                 .addGap(40, 40, 40)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(665, Short.MAX_VALUE))
+                .addComponent(cashout_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(62, 62, 62)
+                .addComponent(sorting_combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(recordDailySalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(26, Short.MAX_VALUE))
+            .addGroup(recordDailySalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(recordDailySalesLayout.createSequentialGroup()
+                    .addGap(310, 310, 310)
+                    .addComponent(jLabel8)
+                    .addContainerGap(565, Short.MAX_VALUE)))
         );
 
         motherTab.addTab("recordDailySales", recordDailySales);
@@ -584,19 +697,27 @@ public class mainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cashout_btn;
+    private javax.swing.JTable dailyCashout_tbl;
     private javax.swing.JButton dashboardButton;
     private javax.swing.JLabel dashboardLabel;
     private javax.swing.JPanel dashboardTab;
     private javax.swing.JPanel firstLayer;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel logoInFull;
     private javax.swing.JLabel logoLabel;
     private javax.swing.JButton logout_btn;
+    private javax.swing.JLabel monthly_sales_summary_label;
     private javax.swing.JTabbedPane motherTab;
     private javax.swing.JPanel navigationpanel;
     private javax.swing.JPanel recordDailySales;
@@ -605,10 +726,12 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JButton recordExpenses_btn;
     private javax.swing.JPanel recordPurchases;
     private javax.swing.JButton recordPurchases_btn;
+    private javax.swing.JComboBox<String> sorting_combobox;
     private javax.swing.JPanel stockTab;
     private javax.swing.JLabel versionLabel;
     private javax.swing.JButton viewStockSummary_btn;
     private javax.swing.JPanel viewWeeklyReport;
     private javax.swing.JButton viewWeeklyReport_btn;
+    private javax.swing.JLabel weekly_cashout_summary_label;
     // End of variables declaration//GEN-END:variables
 }
