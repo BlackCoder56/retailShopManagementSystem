@@ -117,7 +117,6 @@ public class mainFrame extends javax.swing.JFrame {
         versionLabel = new javax.swing.JLabel();
         motherTab = new javax.swing.JTabbedPane();
         dashboardTab = new javax.swing.JPanel();
-        dashboardLabel = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -351,11 +350,6 @@ public class mainFrame extends javax.swing.JFrame {
         motherTab.setBackground(new java.awt.Color(51, 0, 204));
 
         dashboardTab.setBackground(new java.awt.Color(52, 73, 94));
-
-        dashboardLabel.setBackground(new java.awt.Color(236, 240, 241));
-        dashboardLabel.setFont(new java.awt.Font("URW Bookman", 1, 45)); // NOI18N
-        dashboardLabel.setForeground(new java.awt.Color(255, 255, 255));
-        dashboardLabel.setText("Dashboard");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -599,7 +593,7 @@ public class mainFrame extends javax.swing.JFrame {
                     .addComponent(jLabel21)
                     .addComponent(jLabel22))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel23)
                     .addComponent(jLabel24))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -641,13 +635,11 @@ public class mainFrame extends javax.swing.JFrame {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(129, 129, 129)
-                                .addComponent(jButton3)
-                                .addGap(210, 210, 210))
+                                .addComponent(jButton3))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(21, 21, 21)
-                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(12, 12, 12)
+                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(64, 64, 64)
                         .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton2))
@@ -795,23 +787,16 @@ public class mainFrame extends javax.swing.JFrame {
         dashboardTabLayout.setHorizontalGroup(
             dashboardTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dashboardTabLayout.createSequentialGroup()
-                .addGroup(dashboardTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(dashboardTabLayout.createSequentialGroup()
-                        .addGap(207, 207, 207)
-                        .addComponent(dashboardLabel))
-                    .addGroup(dashboardTabLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1213, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addGap(19, 19, 19)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         dashboardTabLayout.setVerticalGroup(
             dashboardTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dashboardTabLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(dashboardTabLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
-                .addComponent(dashboardLabel)
-                .addGap(151, 151, 151))
+                .addContainerGap(297, Short.MAX_VALUE))
         );
 
         motherTab.addTab("dashboard", dashboardTab);
@@ -986,7 +971,9 @@ public class mainFrame extends javax.swing.JFrame {
 
         recordExpenses.setBackground(new java.awt.Color(52, 73, 94));
 
-        jLabel3.setText("3");
+        jLabel3.setFont(new java.awt.Font("URW Bookman", 1, 45)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Record Expenses");
 
         javax.swing.GroupLayout recordExpensesLayout = new javax.swing.GroupLayout(recordExpenses);
         recordExpenses.setLayout(recordExpensesLayout);
@@ -995,14 +982,14 @@ public class mainFrame extends javax.swing.JFrame {
             .addGroup(recordExpensesLayout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addComponent(jLabel3)
-                .addContainerGap(1217, Short.MAX_VALUE))
+                .addContainerGap(828, Short.MAX_VALUE))
         );
         recordExpensesLayout.setVerticalGroup(
             recordExpensesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(recordExpensesLayout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addComponent(jLabel3)
-                .addContainerGap(838, Short.MAX_VALUE))
+                .addContainerGap(801, Short.MAX_VALUE))
         );
 
         motherTab.addTab("recordExpenses", recordExpenses);
@@ -1194,7 +1181,6 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JButton cashout_btn;
     private javax.swing.JTable dailyCashout_tbl;
     private javax.swing.JButton dashboardButton;
-    private javax.swing.JLabel dashboardLabel;
     private javax.swing.JPanel dashboardTab;
     private javax.swing.JPanel firstLayer;
     private javax.swing.JButton jButton1;
