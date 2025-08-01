@@ -40,9 +40,9 @@ public class mainFrame extends javax.swing.JFrame {
         setupButton(dashboardButton, 0);
         setupButton(recordDailySales_btn, 1);
         setupButton(recordPurchases_btn,2);
-        setupButton(recordExpenses_btn,3);
-        setupButton(viewWeeklyReport_btn,4);
-        setupButton(viewStockSummary_btn,5);
+        setupButton(viewWeeklyReport_btn,3);
+        setupButton(viewStockSummary_btn,4);
+        setupButton(recordExpenses_btn,5);        
     }
     
     
@@ -177,12 +177,22 @@ public class mainFrame extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         recordPurchases = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        recordExpenses = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        viewWeeklyReport = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
         stockTab = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
+        viewWeeklyReport = new javax.swing.JPanel();
+        jLabel30 = new javax.swing.JLabel();
+        recordExpenses = new javax.swing.JPanel();
+        expenseCategory_combobox = new javax.swing.JComboBox<>();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        descriptionTextarea = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1570, 900));
@@ -969,57 +979,9 @@ public class mainFrame extends javax.swing.JFrame {
 
         motherTab.addTab("purchaseRecords", recordPurchases);
 
-        recordExpenses.setBackground(new java.awt.Color(52, 73, 94));
-
-        jLabel3.setFont(new java.awt.Font("URW Bookman", 1, 45)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Record Expenses");
-
-        javax.swing.GroupLayout recordExpensesLayout = new javax.swing.GroupLayout(recordExpenses);
-        recordExpenses.setLayout(recordExpensesLayout);
-        recordExpensesLayout.setHorizontalGroup(
-            recordExpensesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(recordExpensesLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jLabel3)
-                .addContainerGap(828, Short.MAX_VALUE))
-        );
-        recordExpensesLayout.setVerticalGroup(
-            recordExpensesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(recordExpensesLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(jLabel3)
-                .addContainerGap(801, Short.MAX_VALUE))
-        );
-
-        motherTab.addTab("recordExpenses", recordExpenses);
-
-        viewWeeklyReport.setBackground(new java.awt.Color(52, 73, 94));
-
-        jLabel4.setText("4");
-
-        javax.swing.GroupLayout viewWeeklyReportLayout = new javax.swing.GroupLayout(viewWeeklyReport);
-        viewWeeklyReport.setLayout(viewWeeklyReportLayout);
-        viewWeeklyReportLayout.setHorizontalGroup(
-            viewWeeklyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(viewWeeklyReportLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jLabel4)
-                .addContainerGap(1217, Short.MAX_VALUE))
-        );
-        viewWeeklyReportLayout.setVerticalGroup(
-            viewWeeklyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(viewWeeklyReportLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(jLabel4)
-                .addContainerGap(838, Short.MAX_VALUE))
-        );
-
-        motherTab.addTab("viewWeeklyReport", viewWeeklyReport);
-
         stockTab.setBackground(new java.awt.Color(52, 73, 94));
 
-        jLabel5.setText("5");
+        jLabel5.setText("4");
 
         javax.swing.GroupLayout stockTabLayout = new javax.swing.GroupLayout(stockTab);
         stockTab.setLayout(stockTabLayout);
@@ -1039,6 +1001,124 @@ public class mainFrame extends javax.swing.JFrame {
         );
 
         motherTab.addTab("stockTabe", stockTab);
+
+        viewWeeklyReport.setBackground(new java.awt.Color(52, 73, 94));
+
+        jLabel30.setText("5");
+
+        javax.swing.GroupLayout viewWeeklyReportLayout = new javax.swing.GroupLayout(viewWeeklyReport);
+        viewWeeklyReport.setLayout(viewWeeklyReportLayout);
+        viewWeeklyReportLayout.setHorizontalGroup(
+            viewWeeklyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewWeeklyReportLayout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(900, Short.MAX_VALUE))
+        );
+        viewWeeklyReportLayout.setVerticalGroup(
+            viewWeeklyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewWeeklyReportLayout.createSequentialGroup()
+                .addGap(132, 132, 132)
+                .addComponent(jLabel30)
+                .addContainerGap(755, Short.MAX_VALUE))
+        );
+
+        motherTab.addTab("viewWeeklyReport", viewWeeklyReport);
+
+        recordExpenses.setBackground(new java.awt.Color(52, 73, 94));
+
+        expenseCategory_combobox.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
+        expenseCategory_combobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Business", "Other" }));
+
+        jLabel29.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel29.setText("Expense Description");
+
+        jLabel3.setFont(new java.awt.Font("URW Bookman", 1, 45)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Record Expenses");
+
+        jLabel31.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel31.setText("Category");
+
+        descriptionTextarea.setColumns(20);
+        descriptionTextarea.setRows(5);
+        jScrollPane4.setViewportView(descriptionTextarea);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Date", "Category", "Description"
+            }
+        ));
+        jScrollPane5.setViewportView(jTable1);
+
+        jButton4.setFont(new java.awt.Font("Liberation Sans", 1, 26)); // NOI18N
+        jButton4.setText("Update");
+
+        jButton5.setFont(new java.awt.Font("Liberation Sans", 1, 26)); // NOI18N
+        jButton5.setText("Add");
+
+        jButton6.setFont(new java.awt.Font("Liberation Sans", 1, 26)); // NOI18N
+        jButton6.setText("Delete");
+
+        javax.swing.GroupLayout recordExpensesLayout = new javax.swing.GroupLayout(recordExpenses);
+        recordExpenses.setLayout(recordExpensesLayout);
+        recordExpensesLayout.setHorizontalGroup(
+            recordExpensesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(recordExpensesLayout.createSequentialGroup()
+                .addGroup(recordExpensesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(recordExpensesLayout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addGroup(recordExpensesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel29)
+                            .addComponent(jLabel31)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(expenseCategory_combobox, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 833, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(recordExpensesLayout.createSequentialGroup()
+                        .addGap(121, 121, 121)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(354, Short.MAX_VALUE))
+        );
+        recordExpensesLayout.setVerticalGroup(
+            recordExpensesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(recordExpensesLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel31)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(expenseCategory_combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(jLabel29)
+                .addGroup(recordExpensesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(recordExpensesLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(164, 164, 164)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(recordExpensesLayout.createSequentialGroup()
+                        .addGap(156, 156, 156)
+                        .addGroup(recordExpensesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(127, Short.MAX_VALUE))
+        );
+
+        motherTab.addTab("recordExpenses", recordExpenses);
 
         firstLayer.add(motherTab, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, -40, 1270, 940));
 
@@ -1182,10 +1262,15 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JTable dailyCashout_tbl;
     private javax.swing.JButton dashboardButton;
     private javax.swing.JPanel dashboardTab;
+    private javax.swing.JTextArea descriptionTextarea;
+    private javax.swing.JComboBox<String> expenseCategory_combobox;
     private javax.swing.JPanel firstLayer;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1208,8 +1293,10 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1228,12 +1315,15 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSpinner jSpinner2;
     private javax.swing.JSpinner jSpinner3;
     private javax.swing.JSpinner jSpinner4;
     private javax.swing.JSpinner jSpinner5;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
